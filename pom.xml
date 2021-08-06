@@ -57,7 +57,7 @@
             <imageTag>latest</imageTag>
           </imageTags>
           <baseImage>skywalking-java-agent</baseImage>
-          <entryPoint>["java", "-Djava.security.egd=file:/dev/./urandom", "-javaagent:/skywalking-agent.jar", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
+          <entryPoint>["java", "-Djava.security.egd=file:/dev/./urandom", "-javaagent:/agent/skywalking-agent.jar", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
           <cmd>["--spring.profiles.active=docker"]</cmd>
           <resources>
             <resource>
