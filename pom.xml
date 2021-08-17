@@ -56,8 +56,12 @@
             <imageTag>${project.version}</imageTag>
             <imageTag>latest</imageTag>
           </imageTags>
+          <!-- skywalking config
           <baseImage>skywalking-java-agent</baseImage>
           <entryPoint>["java", "-Djava.security.egd=file:/dev/./urandom", "-javaagent:/agent/skywalking-agent.jar", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
+          -->
+          <baseImage>java:8</baseImage>
+          <entryPoint>["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
           <cmd>["--spring.profiles.active=docker"]</cmd>
           <resources>
             <resource>
